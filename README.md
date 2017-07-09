@@ -22,3 +22,24 @@ EOF
 $ docker run -it -v $PWD:$PWD -w $PWD tsub/mruby mruby hello.rb
 Hello, world
 ```
+
+## Install with [Whalebrew](https://github.com/bfirsh/whalebrew)
+
+```
+$ whalebrew install tsub/mruby
+
+# Run mirb
+$ mruby mirb
+mirb - Embeddable Interactive Ruby Shell
+
+> puts 'Hello, world!'
+Hello, world!
+ => nil
+
+# Run mruby with `.rb` file
+$ cat <<EOF >> hello.rb
+puts 'Hello, world'
+EOF
+$ mruby mruby hello.rb
+Hello, world
+```
