@@ -1,2 +1,24 @@
 # docker-mruby
-Dockerized mruby
+
+Docker image for mruby :whale:
+
+## Usage
+
+```
+$ docker pull tsub/mruby
+
+# Run mirb
+$ docker run -it tsub/mruby mirb
+mirb - Embeddable Interactive Ruby Shell
+
+> puts 'Hello, world!'
+Hello, world!
+ => nil
+
+# Run mruby with `.rb` file
+$ cat <<EOF >> hello.rb
+puts 'Hello, world'
+EOF
+$ docker run -it -v $PWD:$PWD -w $PWD tsub/mruby mruby hello.rb
+Hello, world
+```
