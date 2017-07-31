@@ -19,7 +19,7 @@ Hello, world!
 $ cat <<EOF >> hello.rb
 puts 'Hello, world'
 EOF
-$ docker run -it -v $PWD:$PWD -w $PWD tsub/mruby mruby hello.rb
+$ docker run -it -v $PWD:$PWD -w $PWD tsub/mruby hello.rb
 Hello, world
 ```
 
@@ -40,6 +40,6 @@ Hello, world!
 $ cat <<EOF >> hello.rb
 puts 'Hello, world'
 EOF
-$ mruby mruby hello.rb
+$ mruby hello.rb
 Hello, world
 ```
