@@ -29,7 +29,6 @@ RUN apk add --update --no-cache --virtual build-dependencies \
 
 ENTRYPOINT [ \
     "switch", \
-        "mruby=mruby", \
         "mirb=mirb", \
         "mrbc=mrbc", \
         "mrdb=mrdb", \
@@ -38,7 +37,8 @@ ENTRYPOINT [ \
         "sh=/bin/sh", \
         "ash=/bin/ash", \
         "shell=/bin/ash", \
-        "--" \
+        "--", \
+    "mruby" \
 ]
 
-CMD ["mirb"]
+CMD ["--help"]
